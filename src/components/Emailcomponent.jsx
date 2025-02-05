@@ -1,10 +1,11 @@
 import React from 'react'
 
-function Emailcomponent({index, email, toggleRead, toggleStar}) {
+function Emailcomponent({index, email, toggleRead, toggleStar, onClick}) {
   return (
     <li
               key={index}
               className={`email ${email.read ? 'read' : 'unread'}`}
+              onClick = {() => onClick(email)}
             >
               <div className="select">
                 <input

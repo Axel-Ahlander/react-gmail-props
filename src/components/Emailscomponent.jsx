@@ -5,9 +5,9 @@ function Emailscomponent(props) {
   return (
     <>
     <main className="emails">
-        <ul>
+        <ul id = "curr-emails">
           {props.filteredEmails.map((email, index) => (
-            <Emailcomponent key = {index} index = {index} email = {email} toggleRead = {props.toggleRead} toggleStar = {props.toggleStar}/>
+            <Emailcomponent key = {index} index = {index} email = {email} toggleRead = {props.toggleRead} toggleStar = {props.toggleStar} onClick={() => props.onClick(email)}/>
           ))}
         </ul>
       </main>
